@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-deployment
+  labels:
+    app: front
+    kind: deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: front
+  template:
+    metadata:
+      labels:
+        app: kubeyield
+        type: front
+    spec:
+      containers:
+      - name: front
+        image: jh0101/front:latest
+        ports:
+        - containerPort: 80
