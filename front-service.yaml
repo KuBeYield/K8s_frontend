@@ -10,3 +10,18 @@ spec:
       port: 80
       targetPort: 80
   clusterIP: None
+
+
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: front-service
+# spec:
+#   type: NodePort
+#   selector:
+#     app: front
+#   ports:
+#     - protocol: TCP
+#       port: 80
+#       targetPort: 80
+#       nodePort: 31000
