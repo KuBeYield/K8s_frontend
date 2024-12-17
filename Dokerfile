@@ -1,6 +1,6 @@
 FROM node:18 AS build
 WORKDIR /front
-RUN git clone https://jh-01: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@github.com/KuBeYield/front.git /front
+RUN git clone https://jh-01:{key}/KuBeYield/front.git /front
 WORKDIR /front
 RUN git pull
 RUN npm install
